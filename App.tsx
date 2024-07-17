@@ -10,9 +10,9 @@ interface Company {
   link: string;
 }
 
-const sheetId = '19JIdSn8QT9mTwMWWKC8uJyF2auMeNEER1lexJCkgyrY';
-const apiKey = 'AIzaSyBCQOCjYVY9GFJxSHz2gbyXapKPciPs44M';
-const sheetName = 'Companies';
+const sheetId = process.env.SHEET_ID;
+const apiKey = process.env.API_KEY;
+const sheetName = process.env.SHEET_NAME;
 
 const transformCompaniesData = data => {
   const transformedData: Company[] = [];
